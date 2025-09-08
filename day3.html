@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postion</title>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 50px;
+            background-color: lightblue;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .static {
+            position: static;
+        }
+
+        .relative {
+            position: relative;
+            top: 20px;
+            left: 30px;
+            background-color: lightgreen;
+
+        }
+
+        .container {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            background-color: lightgray;
+        }
+
+        .absolute {
+            position: absolute;
+            top: 20px;
+            left: 100px;
+            background-color: lightcoral;
+        }
+
+        .fixed {
+            position: fixed;
+            top: 100px;
+            right: 100px;
+            background-color: orange;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Postion -->
+    <!-- static ,absolute,relative,fixed -->
+
+    <div style="height: 1000px;"></div>
+
+    <div class="box static"> Static </div>
+
+
+    <div class="box relative"> Relative</div>
+
+    <div class="container">
+        <div class="box absolute">Absolute</div>
+    </div>
+
+
+    <div class="box fixed">
+        Fixed
+    </div>
+
+    <div main>
+        <div left text>
+        </div>
+        <div>right watch image</div>
+    </div>
+
+</body>
+
+</html>
