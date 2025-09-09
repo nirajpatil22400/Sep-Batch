@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tooltip Example</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            .tooltip-container {
+                position: relative;
+                display: inline-block;
+                margin: 50px;
+            }
+
+
+            .tooltip-button {
+                padding: 10px 20px;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+                font-size: 16px;
+            }
+
+            .tooltip-text {
+                position: absolute;
+                bottom: 125%;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: #333;
+                color: #fff;
+                padding: 5px 10px;
+                border-radius: 5px;
+                white-space: nowrap;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.3s;
+            }
+
+            .tooltip-text::after {
+                content: '';
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                border-width: 5px;
+                border-style: solid;
+                border-color: #333 transparent transparent transparent;
+            }
+
+            .tooltip-container:hover .tooltip-text {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .data {
+                width: 100vw;
+                height: 10%;
+                background-color: #333;
+                color: white;
+                font-size: 16px;
+            }
+
+            p {
+                /* 16px = 1 rem */
+                /* 32px = 2 rem */
+                font-size: 2rem;
+            }
+
+            .blockelement {
+                /* full width */
+                /* new line */
+                /* set width,height,margin,padding */
+                /* each div will be on a separate , stacked vertically */
+                display: block;
+                background-color: lightblue;
+                padding: 10px;
+                border: 1px solid black;
+            }
+
+            .inline {
+                display: inline;
+                background-color: lightcoral;
+            }
+
+            .inlineblock {
+                display: inline-block;
+                width: 20%;
+                height: 10%;
+                background-color: lightgreen;
+                text-align: center;
+                line-height: 50%;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="tooltip-container">
+            <button class="tooltip-button">Hover Me</button>
+            <div class="tooltip-text">This is a tooltip</div>
+        </div>
+
+        <div class="data">
+            data
+        </div>
+
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus distinctio aspernatur necessitatibus ut
+            accusantium odio corrupti, aut molestias amet fugiat, asperiores beatae inventore consectetur perferendis
+            hic obcaecati sint, veniam quisquam.</p>
+
+        <div class="blockelement">
+            Block Element
+        </div>
+        <div class="blockelement">
+            Another Block Element
+        </div>
+
+        <!-- inline -->
+        <span class="inline">Inline 1</span>
+        <span class="inline">Inline 2</span>
+
+        <!-- inline block -->
+        <span class="inlineblock">inline block 1</span>
+        <span class="inlineblock">inline block 1</span>
+    </body>
+
+    </html>
+
+</body>
+
+</html>
